@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>CRUD Operation Using JS</title>
+  </head>
+  <body class=" bg-warnin">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 bg-inf py-5" style="height: 100%">
+          <div class="card">
+            <div class="card-header">
+              <h4>CRUD Operation</h4>
+            </div>
+            <div class="card-body">
+              <form action="" onsubmit="event.preventDefault();onFormSubmit();">
+                <div class="form-group">
+                  <label for="">Username:</label>
+                  <input type="text" class="form-control" id="username" />
+                </div>
+                <div class="form-group">
+                  <label for="">E-mail:</label>
+                  <input type="text" class="form-control" id="email" />
+                </div>
+                <div class="form-group">
+                  <label for="">Contact No:</label>
+                  <input type="text" class="form-control" id="contact" />
+                </div>
+                <button class="btn btn-primary" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8 py-5">
+          <table class="table table-striped" id="studentList">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Email</th>
+                <th scope="col">Contact NO</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
