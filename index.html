@@ -14,26 +14,29 @@
 
     <title>CRUD Operation Using JS</title>
   </head>
-  <body class=" bg-warnin">
+  <body class=" bg-success">
     <div class="container">
       <div class="row">
         <div class="col-md-4 bg-inf py-5" style="height: 100%">
           <div class="card">
-            <div class="card-header">
-              <h4>CRUD Operation</h4>
+            <div class="card-header bg-dark text-white">
+              <h4 class="mb-0">CRUD Operation</h4>
             </div>
             <div class="card-body">
               <form action="" onsubmit="event.preventDefault();onFormSubmit();">
                 <div class="form-group">
-                  <label for="">Username:</label>
-                  <input type="text" class="form-control" id="username" />
+                  <label for="">Name <span class="text-danger">*</span> </label>
+                  <label for="" class="text-danger d-none" id="validationError">
+                    This field is required
+                  </label>
+                  <input type="text" class="form-control" id="fullName" />
                 </div>
                 <div class="form-group">
-                  <label for="">E-mail:</label>
+                  <label for="">E-mail</label>
                   <input type="text" class="form-control" id="email" />
                 </div>
                 <div class="form-group">
-                  <label for="">Contact No:</label>
+                  <label for="">Contact No</label>
                   <input type="text" class="form-control" id="contact" />
                 </div>
                 <button class="btn btn-primary" type="submit">Submit</button>
@@ -41,7 +44,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-8 py-5">
+        <div class="col-md-8 table-responsive py-5">
           <table class="table table-striped" id="studentList">
             <thead class="thead-dark">
               <tr>
@@ -51,7 +54,7 @@
                 <th scope="col"></th>
               </tr>
             </thead>
-            <tbody></tbody>
+            <tbody class="bg-white"></tbody>
           </table>
         </div>
       </div>
